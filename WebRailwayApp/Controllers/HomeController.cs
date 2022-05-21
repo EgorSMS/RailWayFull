@@ -12,9 +12,12 @@ namespace WebRailwayApp.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private RailwayDBContext db;
+
+        public HomeController(ILogger<HomeController> logger, RailwayDBContext context)
         {
             _logger = logger;
+            this.db = context;
         }
 
         public IActionResult Index()
@@ -23,6 +26,11 @@ namespace WebRailwayApp.Controllers
         }
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult TimeTable()
         {
             return View();
         }

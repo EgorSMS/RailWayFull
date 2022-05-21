@@ -5655,23 +5655,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\negor\\.nuget\\packages\\": {},
-    "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\Egor\\Курчас 2.04\\WebRailwayApp\\WebRailwayApp\\WebRailwayApp.csproj",
+      "projectUniqueName": "C:\\Users\\user\\source\\repos\\EgorSMS\\RailWayFull\\WebRailwayApp\\WebRailwayApp.csproj",
       "projectName": "WebRailwayApp",
-      "projectPath": "D:\\Users\\Egor\\Курчас 2.04\\WebRailwayApp\\WebRailwayApp\\WebRailwayApp.csproj",
-      "packagesPath": "C:\\Users\\negor\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\Egor\\Курчас 2.04\\WebRailwayApp\\WebRailwayApp\\obj\\",
+      "projectPath": "C:\\Users\\user\\source\\repos\\EgorSMS\\RailWayFull\\WebRailwayApp\\WebRailwayApp.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\user\\source\\repos\\EgorSMS\\RailWayFull\\WebRailwayApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\negor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5720,7 +5721,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
