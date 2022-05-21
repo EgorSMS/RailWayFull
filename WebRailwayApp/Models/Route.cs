@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -12,9 +13,10 @@ namespace WebRailwayApp.Models
             
         }
 
-        public int IdRoute { get; set; }
-        public int IdCityDeparture { get; set; }
-        public int IdCityArrival { get; set; }
+        [Key]
+        public int ID_Route { get; set; }
+        public int ID_City_Departure { get; set; }
+        public int ID_City_Arrival { get; set; }
         public int PlatformDeparture { get; set; }
         public int PlatformArrival { get; set; }
 

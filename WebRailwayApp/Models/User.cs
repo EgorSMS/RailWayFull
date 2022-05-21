@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -7,7 +8,8 @@ namespace WebRailwayApp.Models
 {
     public partial class User
     {
-        public int IdUser { get; set; }
+        [Key]
+        public int ID_User { get; set; }
         public string Surname { get; set; }
         public string Name { get; set; }
         public string Firdname { get; set; }
@@ -18,7 +20,7 @@ namespace WebRailwayApp.Models
         public bool Gender { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public int IdRole { get; set; }
+        public int ID_Role { get; set; }
 
     }
 }

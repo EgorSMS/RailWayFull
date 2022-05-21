@@ -7,7 +7,7 @@ namespace WebRailwayApp
     {
         public RailwayDBContext(DbContextOptions<RailwayDBContext> options) : base(options) { }
 
-        public DbSet<City> City { get; set; }
+        public DbSet<Cities> Cities { get; set; }
         public DbSet<Doljnost> Doljnost { get; set; }
         public DbSet<Role> Role { get; set; }
         public DbSet<Route> Route { get; set; }

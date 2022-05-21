@@ -120,7 +120,6 @@ C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\st
 C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\WebRailwayApp.TagHelpers.input.cache
 C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\WebRailwayApp.TagHelpers.output.cache
 C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\WebRailwayApp.RazorCoreGenerate.cache
-C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\Authorization.cshtml.g.cs
 C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -137,3 +136,6 @@ C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\We
 C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\WebRailwayApp.genruntimeconfig.cache
 C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\ref\WebRailwayApp.dll
 C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\TimeTable.cshtml.g.cs
+C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Auth\Authorization.cshtml.g.cs
+C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\AddCity.cshtml.g.cs
+C:\Users\user\source\repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\AddRoute.cshtml.g.cs

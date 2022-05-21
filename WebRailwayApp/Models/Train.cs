@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -12,8 +13,9 @@ namespace WebRailwayApp.Models
             
         }
 
-        public int IdTrain { get; set; }
-        public int IdTypeOfTrain { get; set; }
+        [Key]
+        public int ID_Train { get; set; }
+        public int ID_TypeOfTrain { get; set; }
         public int NumberOfTrain { get; set; }
 
         

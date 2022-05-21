@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -11,7 +12,8 @@ namespace WebRailwayApp.Models
         {
         }
 
-        public int IdStaff { get; set; }
+        [Key]
+        public int ID_Staff { get; set; }
         public string Surname { get; set; }
         public string Name { get; set; }
         public string Firdname { get; set; }
@@ -20,7 +22,7 @@ namespace WebRailwayApp.Models
         public string SeriaPass { get; set; }
         public string NumberPass { get; set; }
         public bool Gender { get; set; }
-        public int IdDoljnost { get; set; }
+        public int ID_Doljnost { get; set; }
 
         
     }
