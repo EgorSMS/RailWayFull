@@ -1,0 +1,67 @@
+﻿@{ ViewData["Title"] = "Добавление расписания"; }
+@model TimeTable
+
+<form asp-action="AddTimeTable" asp-controller="Home" asp-antiforgery="true">
+    <div id="m">
+        <div class="container">
+            <div class="row centered">
+                <h1>Добавление расписания</h1>
+                <table>
+                    <tr>
+                        <td><h4>Поезд</h4></td>
+                        <td>
+                            <select name="" id="">
+                                <option value="1">Вариант 1</option>
+                                <option value="2">Вариант 2</option>
+                            </select>
+                        </td>
+                        <td><h4>Маршрут</h4></td>
+                        <td>
+                            <select name="" id="">
+                                <option value="1">Вариант 1</option>
+                                <option value="2">Вариант 2</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="datetime-local" class="datetime__input" placeholder="Дата и время отправления">
+                        </td>
+                        <td>
+                            <input type="datetime-local" class="datetime__input" placeholder="Дата и время прибытия">
+                        </td>
+                        <td><h4>Город остановки</h4></td>
+                        <td>
+                            <select name="" id="">
+                                <option value="1">Вариант 1</option>
+                                <option value="2">Вариант 2</option>
+                            </select>
+                        </td>
+                        <td><h4>Перрон</h4></td>
+                        <td>
+                            <select name="" id="">
+                                <option value="1">Вариант 1</option>
+                                <option value="2">Вариант 2</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="datetime-local" class="datetime__input" placeholder="Дата и время остановки">
+                        </td>
+                        <td><h4>Все остановки в маршруте</h4></td>
+                        <td>
+                            <select name="" id="">
+                                <option value="1">Вариант 1</option>
+                                <option value="2">Вариант 2</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button class="twice__button">Добавить остановку</button>
+                            <button class="twice__button">Удалить остановку</button>
+                        </td>
+                        <td>
+                            <button class="add_button">Добавить расписание</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>

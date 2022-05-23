@@ -1,0 +1,73 @@
+﻿@{ ViewData["Title"] = "Добавить сотрудника"; }
+@model staff
+
+
+<form asp-action="AddStaff" asp-controller="Home" asp-antiforgery="true">
+    <div id="m">
+        <div class="container">
+            <div class="row centered">
+                <h1>Добавление сотрудника</h1>
+                <table>
+                    <tr>
+                        <td><h4>Фамилия</h4></td>
+                        <td>
+                            <input class="form__input" placeholder=" ">
+                        </td>
+                        <td><h4>Имя</h4></td>
+                        <td>
+                            <input class="form__input" placeholder=" ">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><h4>Отчество</h4></td>
+                        <td>
+                            <input class="form__input" placeholder=" ">
+                        </td>
+                        <td><h4>Пол</h4></td>
+                        <td>
+                            <select name="" id="">
+                                <option value="1">Вариант 1</option>
+                                <option value="2">Вариант 2</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><h4>Должность</h4></td>
+                        <td>
+                            <select name="" id="">
+                                <option value="1">Вариант 1</option>
+                                <option value="2">Вариант 2</option>
+                            </select>
+                        </td>
+                        <td><h4>СНИЛС</h4></td>
+                        <td>
+                            <input class="form__input" placeholder=" ">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><h4>ИНН</h4></td>
+                        <td>
+                            <input class="form__input" placeholder=" ">
+                        </td>
+                        <td><h4>Серия паспорта</h4></td>
+                        <td>
+                            <input class="form__input" placeholder=" ">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><h4>Номер паспорта</h4></td>
+                        <td>
+                            <input class="form__input" placeholder=" ">
+                        </td>
+                    </tr>
+
+                </table>
+
+                <button class="add_button">Добавить</button>
+            </div>
+        </div>
+    </div>
+</form>

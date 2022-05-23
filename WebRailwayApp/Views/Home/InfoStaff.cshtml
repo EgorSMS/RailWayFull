@@ -1,0 +1,26 @@
+﻿@{ ViewData["Title"] = "Информация о сотрудниках"; }
+@model staff
+
+<form asp-action="InfoStaff" asp-controller="Home" asp-antiforgery="true">
+    <div id="m">
+        <div class="container">
+            <div class="row centered">
+                <h1>Информация о сотрудниках</h1>
+                <table>
+                    <tr>
+                        <td>
+                            <select name="" id="">
+                                <option value="1">Вариант 1</option>
+                                <option value="2">Вариант 2</option>
+                            </select>
+                        </td>
+                        <td>
+                            <button class="twice__button">Добавить сотрудника</button>
+                            <button class="twice__button">Удалить</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</form>
