@@ -23,8 +23,8 @@ namespace WebRailwayApp.Models
 
         public string Firdname { get; set; }
 
-        [MinLength(11, ErrorMessage = "в СНИСЛС должно быть 11 символов")]
-        [MaxLength(11, ErrorMessage = "в СНИСЛС должно быть 11 символов")]
+        [MinLength(11, ErrorMessage = "в СНИЛС должно быть 11 символов")]
+        [MaxLength(11, ErrorMessage = "в СНИЛС должно быть 11 символов")]
         public string Snils { get; set; }
 
         [MinLength(11, ErrorMessage = "в ИНН должно быть 11 символов")]

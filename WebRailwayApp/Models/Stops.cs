@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebRailwayApp.Models
 {
-    public partial class Stop
+    public partial class Stops
     {
         [Key]
         public int ID_Stop { get; set; }

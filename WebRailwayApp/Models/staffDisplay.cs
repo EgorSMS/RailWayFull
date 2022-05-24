@@ -5,6 +5,6 @@ namespace WebRailwayApp.Models
     public class staffDisplay
     {
         public staff staff { get; set; }
-        public List<Cities> cities { get; set; }
+        public List<Doljnost> doljnosts { get; set; }
     }
 }

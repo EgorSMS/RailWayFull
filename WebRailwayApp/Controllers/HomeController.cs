@@ -47,7 +47,7 @@ namespace WebRailwayApp.Controllers
                 await db.SaveChangesAsync();
                 return Redirect("Index"); //ПОМЕНЯТЬ ВЫВОД НА СПИСОК ГОРОДОВ
             }
-            else return View(city);
+            return View(city);
         }
 
         public async Task<IActionResult> AddRoute()
@@ -76,7 +76,7 @@ namespace WebRailwayApp.Controllers
                 await db.SaveChangesAsync();
                 return Redirect("Index"); //ПОМЕНЯТЬ ВЫВОД НА СПИСОК МАРШРУТОВ
             }
-            else return View(routeDisplay);
+            return View(routeDisplay);
         }
 
         public IActionResult TimeTable()
@@ -90,20 +90,23 @@ namespace WebRailwayApp.Controllers
             return RedirectToAction("Authorization", "Auth");
         }
 
-        // ОБНОВЛЕНИЕ
-
         public async Task<IActionResult> AddStaff()
         {
             staffDisplay staffDisplay = new staffDisplay();
-            staffDisplay.cities = await db.Cities.ToListAsync();
+            staffDisplay.doljnosts = await db.Doljnost.ToListAsync();
             return View(staffDisplay);
         }
 
         [HttpPost]
         public async Task<IActionResult> AddStaff(staffDisplay staffDisplay)
         {
-            staffDisplay.cities = await db.Cities.ToListAsync();
-
+            staffDisplay.doljnosts = await db.Doljnost.ToListAsync();
+            if (ModelState.IsValid)
+            {
+                db.staff.Add(staffDisplay.staff);
+                await db.SaveChangesAsync();
+                return RedirectToAction("InfoStaff");
+            }
             return View(staffDisplay);
         }
 
@@ -123,9 +126,78 @@ namespace WebRailwayApp.Controllers
             return View(await db.staff.ToListAsync());
         }
 
-        public IActionResult AddTimeTable()
+        public async Task<IActionResult> AddTimeTable()
         {
-            return View();
+            TimeTableDisplay timeTableDisplay = new TimeTableDisplay();
+            timeTableDisplay.cities = await db.Cities.ToListAsync();
+            timeTableDisplay.trains = await db.Train.ToListAsync();
+            timeTableDisplay.routes = await db.Route.ToListAsync();
+            return View(timeTableDisplay);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddTimeTable(TimeTableDisplay timeTableDisplay)
+        {
+            timeTableDisplay.cities = await db.Cities.ToListAsync();
+            timeTableDisplay.trains = await db.Train.ToListAsync();
+            var routes = await db.Route.ToListAsync();
+            timeTableDisplay.routes = routes;
+            if (ModelState.IsValid)
+            {
+                if (timeTableDisplay.timeTable.DateTimeArrived <= timeTableDisplay.timeTable.DateTimeDeparted) 
+                    timeTableDisplay.ErrorDate = true;
+
+                DateTime dateS = timeTableDisplay.timeTable.DateTimeDeparted;
+                DateTime dateE = timeTableDisplay.timeTable.DateTimeArrived;
+
+                var stops = await db.Stops.ToListAsync();
+                var route = routes.FirstOrDefault(r => r.ID_Route == timeTableDisplay.timeTable.ID_Route);
+                foreach (Stops stop in stops)
+                {
+                    if (stop.ID_City == route.ID_City_Departure && dateS < stop.TimeOfStop.AddMinutes(30) && dateS > stop.TimeOfStop.AddMinutes(-30) && stop.Platform == route.PlatformDeparture)
+                        timeTableDisplay.ErrorDateDepartureAlreadyExist = true;
+
+                    if (stop.ID_City == route.ID_City_Arrival && dateE < stop.TimeOfStop.AddMinutes(30) && dateE > stop.TimeOfStop.AddMinutes(-30) && stop.Platform == route.PlatformArrival)
+                        timeTableDisplay.ErrorDateArrivalAlreadyExist = true;
+                }
+
+                var timeTables = await db.TimeTable.ToListAsync();
+                foreach (TimeTable timeT in timeTables)
+                {
+                    var routeCheck = routes.Where(r => r.ID_Route == timeT.ID_Route).FirstOrDefault();
+
+                    if (routeCheck.ID_City_Departure == route.ID_City_Departure && dateS < timeT.DateTimeDeparted.AddMinutes(30) && dateS > timeT.DateTimeDeparted.AddMinutes(-30) && routeCheck.PlatformDeparture == route.PlatformDeparture)
+                        timeTableDisplay.ErrorDateDepartureAlreadyExist = true;
+
+                    if (routeCheck.ID_City_Arrival == route.ID_City_Departure && dateS < timeT.DateTimeArrived.AddMinutes(30) && dateS > timeT.DateTimeArrived.AddMinutes(-30) && routeCheck.PlatformArrival == route.PlatformDeparture)
+                        timeTableDisplay.ErrorDateDepartureAlreadyExist = true;
+
+                    if (routeCheck.ID_City_Departure == route.ID_City_Arrival && dateE < timeT.DateTimeDeparted.AddMinutes(30) && dateE > timeT.DateTimeDeparted.AddMinutes(-30) && routeCheck.PlatformDeparture == route.PlatformArrival)
+                        timeTableDisplay.ErrorDateArrivalAlreadyExist = true;
+
+                    if (routeCheck.ID_City_Arrival == route.ID_City_Arrival && dateE < timeT.DateTimeArrived.AddMinutes(30) && dateE > timeT.DateTimeArrived.AddMinutes(-30) && routeCheck.PlatformArrival == route.PlatformArrival)
+                        timeTableDisplay.ErrorDateArrivalAlreadyExist = true;
+                }
+
+                if (timeTableDisplay.ErrorDateArrivalAlreadyExist || timeTableDisplay.ErrorDateDepartureAlreadyExist || timeTableDisplay.ErrorDate)
+                    return View(timeTableDisplay);
+
+                db.TimeTable.Add(timeTableDisplay.timeTable);
+                await db.SaveChangesAsync();
+                return Redirect("Index"); //ПОМЕНЯТЬ ВЫВОД НА СПИСОК РАСПИСАНИЯ
+            }
+            return View(timeTableDisplay);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddStopTimeTable(TimeTableDisplay timeTableDisplay)
+        {
+            timeTableDisplay.cities = await db.Cities.ToListAsync();
+            timeTableDisplay.trains = await db.Train.ToListAsync();
+            timeTableDisplay.routes = await db.Route.ToListAsync();
+
+
+            return View("AddTimeTable", timeTableDisplay);
         }
     }
 }

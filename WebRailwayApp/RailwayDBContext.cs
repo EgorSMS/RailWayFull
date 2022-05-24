@@ -13,7 +13,7 @@ namespace WebRailwayApp
         public DbSet<Route> Route { get; set; }
         public DbSet<staff> staff { get; set; }
         public DbSet<StaffOfTeam> StaffOfTeam { get; set; }
-        public DbSet<Stop> Stop { get; set; }
+        public DbSet<Stops> Stops { get; set; }
         public DbSet<TimeTable> TimeTable { get; set; }
         public DbSet<Train> Train { get; set; }
         public DbSet<TypeOfTrain> TypeOfTrain { get; set; }
