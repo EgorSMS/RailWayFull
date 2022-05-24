@@ -1,8 +1,8 @@
 ﻿@{ ViewData["Title"] = "Добавить сотрудника"; }
-@model staff
+@model staffDisplay
 
 
-<form asp-action="AddStaff" asp-controller="Home" asp-antiforgery="true">
+<form asp-action="AddStaff" asp-controller="Home" asp-antiforgery="true" method="">
     <div id="m">
         <div class="container">
             <div class="row centered">
@@ -11,11 +11,11 @@
                     <tr>
                         <td><h4>Фамилия</h4></td>
                         <td>
-                            <input class="form__input" placeholder=" ">
+                            <input class="form__input" type="text" asp-for="staff.Surname" placeholder=" ">
                         </td>
                         <td><h4>Имя</h4></td>
                         <td>
-                            <input class="form__input" placeholder=" ">
+                            <input class="form__input" type="text" asp-for="staff.Name" placeholder=" ">
                         </td>
                     </tr>
                     <tr>
@@ -26,8 +26,8 @@
                         <td><h4>Пол</h4></td>
                         <td>
                             <select name="" id="">
-                                <option value="1">Вариант 1</option>
-                                <option value="2">Вариант 2</option>
+                                <option value="1">Мужской</option>
+                                <option value="0">Женский</option>
                             </select>
                         </td>
                     </tr>
@@ -66,7 +66,7 @@
 
                 </table>
 
-                <button class="add_button">Добавить</button>
+                <button type="submit" class="add_button">Добавить</button>
             </div>
         </div>
     </div>

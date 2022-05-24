@@ -213,3 +213,6 @@ D:\Users\Egor\Downloads\RailWayFull-web\RailWayFull-web\WebRailwayApp\obj\Debug\
 D:\Users\Egor\Downloads\RailWayFull-web\RailWayFull-web\WebRailwayApp\obj\Debug\net5.0\WebRailwayApp.genruntimeconfig.cache
 D:\Users\Egor\Downloads\RailWayFull-web\RailWayFull-web\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\AddStaff.cshtml.g.cs
 D:\Users\Egor\Downloads\RailWayFull-web\RailWayFull-web\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\InfoStaff.cshtml.g.cs
+C:\Users\user\Source\Repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\AddStaff.cshtml.g.cs
+C:\Users\user\Source\Repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\AddTimeTable.cshtml.g.cs
+C:\Users\user\Source\Repos\EgorSMS\RailWayFull\WebRailwayApp\obj\Debug\net5.0\Razor\Views\Home\InfoStaff.cshtml.g.cs

@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\Egor\\Downloads\\RailWayFull-web\\RailWayFull-web\\WebRailwayApp\\WebRailwayApp.csproj": {}
+    "C:\\Users\\user\\source\\repos\\EgorSMS\\RailWayFull\\WebRailwayApp\\WebRailwayApp.csproj": {}
   },
   "projects": {
-    "D:\\Users\\Egor\\Downloads\\RailWayFull-web\\RailWayFull-web\\WebRailwayApp\\WebRailwayApp.csproj": {
+    "C:\\Users\\user\\source\\repos\\EgorSMS\\RailWayFull\\WebRailwayApp\\WebRailwayApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\Egor\\Downloads\\RailWayFull-web\\RailWayFull-web\\WebRailwayApp\\WebRailwayApp.csproj",
+        "projectUniqueName": "C:\\Users\\user\\source\\repos\\EgorSMS\\RailWayFull\\WebRailwayApp\\WebRailwayApp.csproj",
         "projectName": "WebRailwayApp",
-        "projectPath": "D:\\Users\\Egor\\Downloads\\RailWayFull-web\\RailWayFull-web\\WebRailwayApp\\WebRailwayApp.csproj",
-        "packagesPath": "C:\\Users\\negor\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\Egor\\Downloads\\RailWayFull-web\\RailWayFull-web\\WebRailwayApp\\obj\\",
+        "projectPath": "C:\\Users\\user\\source\\repos\\EgorSMS\\RailWayFull\\WebRailwayApp\\WebRailwayApp.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\user\\source\\repos\\EgorSMS\\RailWayFull\\WebRailwayApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\negor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,6 +44,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.17, )"
@@ -66,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "D:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

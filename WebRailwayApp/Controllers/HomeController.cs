@@ -90,15 +90,39 @@ namespace WebRailwayApp.Controllers
             return RedirectToAction("Authorization", "Auth");
         }
 
-        // ОБНОВЛЕНИЕ //
-        public IActionResult AddStaff()
+        // ОБНОВЛЕНИЕ
+
+        public async Task<IActionResult> AddStaff()
         {
-            return View();
+            staffDisplay staffDisplay = new staffDisplay();
+            staffDisplay.cities = await db.Cities.ToListAsync();
+            return View(staffDisplay);
         }
-        public IActionResult InfoStaff()
+
+        [HttpPost]
+        public async Task<IActionResult> AddStaff(staffDisplay staffDisplay)
         {
-            return View();
+            staffDisplay.cities = await db.Cities.ToListAsync();
+
+            return View(staffDisplay);
         }
+
+        public async Task<IActionResult> DeleteStaff(int id)
+        {
+            var staffToDelete = await db.staff.FirstAsync(s => s.ID_Staff == id);
+            if (staffToDelete != null)
+            {
+                db.staff.Remove(staffToDelete);
+                await db.SaveChangesAsync();
+            }
+            return RedirectToAction("InfoStaff");
+        }
+
+        public async Task<IActionResult> InfoStaff()
+        {
+            return View(await db.staff.ToListAsync());
+        }
+
         public IActionResult AddTimeTable()
         {
             return View();
